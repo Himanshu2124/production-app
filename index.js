@@ -17,7 +17,13 @@ const jwt = require("jsonwebtoken");
 app.listen(port, () => {
     console.log("Server is running on port 8080");
 });
-
+//home
+app.get("/",(req, res)=>{
+ res.status(200).send({
+     "success":true;
+     "msg":"Node Server Running"
+ })   
+})
 mongoose
     .connect("mongodb+srv://hsaini:Himanshu@cluster0.gff3tcn.mongodb.net/backend-ecommerceapp", {
         useNewUrlParser: true,
